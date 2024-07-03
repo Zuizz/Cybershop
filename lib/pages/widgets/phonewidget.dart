@@ -1,6 +1,9 @@
 import 'package:cybershop/pages/Homepage.dart';
+import 'package:cybershop/pages/buypage.dart';
 import 'package:cybershop/pages/phonecatalog.dart';
 import 'package:cybershop/pages/widgets/phonecat.dart';
+import 'package:cybershop/pages/widgets/theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -16,7 +19,9 @@ class phonewidget extends StatelessWidget {
 
       child: Row(
         children: [
-          Image.network(item.image,height: 100,),
+          Hero(
+              tag: Key(item.id.toString()),
+              child: Image.network(item.image,height: 100,)),
           Expanded(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -25,15 +30,17 @@ class phonewidget extends StatelessWidget {
               ButtonBar(
                 children: [
                   "\$${item.price}".text.make(),
-                  ElevatedButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage()));
-                  }, child: Text("Buy"))
+                  ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Themes.Blueish)),
+                      onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => buypage(buy: item)));
+                  }, child: Text("Buy",style: TextStyle(color: Colors.white),))
                 ],
               )
             ],
           ))
-        ],
+        ]
       )
-    ).red50.square(150).make().py16();
+    ).white.rounded.square(150).make().py32();
   }
 }
