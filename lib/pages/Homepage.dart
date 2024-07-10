@@ -1,12 +1,13 @@
 import 'package:cybershop/pages/drawer.dart';
 import 'package:cybershop/pages/hpslide.dart';
+import 'package:cybershop/pages/lapcatalog.dart';
 import 'package:cybershop/pages/phonecatalog.dart';
-import 'package:cybershop/pages/widgets/phonecat.dart';
+
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:velocity_x/velocity_x.dart';
+
 
 
 
@@ -28,7 +29,10 @@ class Homepage extends StatelessWidget {
                         fontSize: 30,fontFamily: 'poppins',
                     ),),
                     Text("Welcome to CyberShop",style: TextStyle(fontSize: 20,fontFamily: 'pixel'),),
-                    Padding(padding: EdgeInsets.only(bottom: 130)),
+
+                    Image.network('https://mir-s3-cdn-cf.behance.net/project_modules/disp/69f08d97315723.5ec2893224822.png',height:500,),
+
+                    Padding(padding: EdgeInsets.only(bottom: 5)),
                     slide(),
                     Row(
                       children: [
@@ -47,7 +51,7 @@ class Homepage extends StatelessWidget {
                               ),),),
                         GestureDetector(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => phonecatalog()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => lapcatalog()));
                           },
 
                           child: Padding(padding: EdgeInsets.only(right: 60,),
@@ -69,7 +73,25 @@ class Homepage extends StatelessWidget {
 
 
                       ],
+                    ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => lapcatalog()));
+                          },
+
+                          child: Padding(padding: EdgeInsets.only(right: 60,),
+                            child: Card(
+                                color: Colors.white,
+                                elevation: 200,
+                                shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
+
+                                child: Image.asset('assets/icons/laptop.png',height: 80,)
+                            ),),),
+                      ],
                     )
+
       ]
       ),
     );

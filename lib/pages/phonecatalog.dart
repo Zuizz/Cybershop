@@ -31,7 +31,9 @@ class phonecatalog extends StatelessWidget {
               );
             }
         ),
-      ),)
+      ),
+      ),
+          debugShowCheckedModeBanner: false,
     );
   }
 }

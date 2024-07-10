@@ -21,7 +21,7 @@ class phonewidget extends StatelessWidget {
         children: [
           Hero(
               tag: Key(item.id.toString()),
-              child: Image.network(item.image,height: 100,)),
+              child: Image.network(item.image,height: 80,).px12()),
           Expanded(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +29,7 @@ class phonewidget extends StatelessWidget {
               Text(item.name),
               ButtonBar(
                 children: [
-                  "\$${item.price}".text.make(),
+                  "\ rs ${item.price}".text.make().py1(),
                   ElevatedButton(
                     style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Themes.Blueish)),
                       onPressed: (){

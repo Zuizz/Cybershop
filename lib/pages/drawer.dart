@@ -10,7 +10,7 @@ class csdrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-
+      backgroundColor: Colors.transparent,
       shadowColor: Themes.creamColor,
       child: Container(
         color: Themes.Blueish,
