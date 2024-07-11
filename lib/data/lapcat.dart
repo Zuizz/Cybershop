@@ -1,6 +1,5 @@
 
 
-import 'dart:js_interop';
 
 class lap{
   static final laptops = [

@@ -1,13 +1,13 @@
-import 'package:cybershop/data/phonecat.dart';
+import 'package:cybershop/data/earpodcat.dart';
+import 'package:cybershop/data/speakercat.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
-
 import 'package:velocity_x/velocity_x.dart';
 
 
-class buypage extends StatelessWidget {
-  final Item buy;
-  const buypage({super.key, required this.buy});
+class speakerbuypage extends StatelessWidget {
+  final Speaker buy;
+  const speakerbuypage({super.key, required this.buy});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class buypage extends StatelessWidget {
         body: Column(
           children: [
             Hero(
-              tag: Key(buy.id.toString()),
-                child: Image.network(buy.image).p16().h32(context)),
+                tag: Key(buy.Id.toString()),
+                child: Image.network(buy.Image).p16().h32(context)),
             Expanded(child: VxArc(
               height: 20,
               edge: VxEdge.top,
@@ -32,7 +32,7 @@ class buypage extends StatelessWidget {
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      buy.name.text.xl4.fontFamily('poppins').make(),
+                      buy.Name.text.xl4.fontFamily('poppins').make(),
                       Text(buy.Features,textAlign: TextAlign.justify,style: const TextStyle(fontSize: 17,color: Colors.blueGrey,fontFamily: 'poppins'),)
                     ],
                   ).p16(),
@@ -45,9 +45,9 @@ class buypage extends StatelessWidget {
         bottomNavigationBar: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
-            " rs ${buy.price}".text.xl2.bold.make(),
+            " rs ${buy.Price}".text.xl2.bold.make(),
             ElevatedButton(onPressed: (){},
-            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)), child: const Text("Buy",style: TextStyle(color: Colors.white),),
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)), child: const Text("Buy",style: TextStyle(color: Colors.white),),
             ).wh(100, 60)
           ],
         ).h(100),

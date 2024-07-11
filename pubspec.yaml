@@ -65,6 +65,9 @@ flutter:
      - assets/avatar.png
      - assets/icons/laptop.png
      - assets/icons/mobile.png
+     - assets/icons/earphone.png
+     - assets/icons/speaker.png
+     - assets/icons/tablet.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

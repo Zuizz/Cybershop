@@ -1,9 +1,6 @@
-import 'package:cybershop/pages/Homepage.dart';
+import 'package:cybershop/data/phonecat.dart';
 import 'package:cybershop/pages/buypage.dart';
-import 'package:cybershop/pages/phonecatalog.dart';
-import 'package:cybershop/pages/widgets/phonecat.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -11,7 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 class phonewidget extends StatelessWidget {
   final Item item;
 
-  const phonewidget({super.key, required this.item}) : assert(item != null);
+  const phonewidget({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +23,15 @@ class phonewidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(item.name),
+              Text(item.name, style: TextStyle(fontFamily: 'poppins')),
               ButtonBar(
                 children: [
-                  "\ rs ${item.price}".text.make().py1(),
+                  " rs ${item.price}".text.fontFamily('poppins').make().py1(),
                   ElevatedButton(
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Themes.Blueish)),
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                       onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => buypage(buy: item)));
-                  }, child: Text("Buy",style: TextStyle(color: Colors.white),))
+                  }, child: const Text("Buy",style: TextStyle(color: Colors.white),))
                 ],
               )
             ],

@@ -1,14 +1,17 @@
-import 'package:cybershop/data/lapcat.dart';
-import 'package:cybershop/pages/buypages/lapbuy.dart';
-
+import 'package:cybershop/data/earpodcat.dart';
+import 'package:cybershop/data/speakercat.dart';
+import 'package:cybershop/pages/buypage.dart';
+import 'package:cybershop/pages/buypages/podbuy.dart';
+import 'package:cybershop/pages/buypages/speakerbuy.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class lapwidget extends StatelessWidget {
-  final Laptop laptop;
 
-  const lapwidget({super.key, required this.laptop});
+class speakerwidget extends StatelessWidget {
+  final  Speaker speaker;
+
+  const speakerwidget({super.key, required this.speaker});
 
   @override
   Widget build(BuildContext context) {
@@ -17,20 +20,20 @@ class lapwidget extends StatelessWidget {
         child: Row(
             children: [
               Hero(
-                  tag: Key(laptop.id.toString()),
-                  child: Image.network(laptop.image,height: 80,).px12()),
+                  tag: Key(speaker.Id.toString()),
+                  child: Image.network(speaker.Image,height: 80,).px12()),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(laptop.name, style: TextStyle(fontFamily: 'poppins')),
+                  Text(speaker.Name,style: TextStyle(fontFamily: 'poppins'),),
                   ButtonBar(
                     children: [
-                      " rs ${laptop.price}".text.fontFamily('poppins').make().py1(),
+                      " rs ${speaker.Price}".text.fontFamily('poppins').make().py1(),
                       ElevatedButton(
                           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                           onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => lapbuypage(buy: laptop)));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => speakerbuypage(buy: speaker)));
                           }, child: const Text("Buy",style: TextStyle(color: Colors.white),))
                     ],
                   )

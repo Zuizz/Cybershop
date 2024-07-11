@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main()
 {
-  runApp(Cybershop());
+  runApp(const Cybershop());
 }
 
 
@@ -14,7 +14,8 @@ class Cybershop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
+      themeMode: ThemeMode.system,
       home: Homepage(),
       debugShowCheckedModeBanner: false,
     );

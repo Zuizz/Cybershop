@@ -1,14 +1,15 @@
-import 'package:cybershop/data/lapcat.dart';
-import 'package:cybershop/pages/buypages/lapbuy.dart';
-
+import 'package:cybershop/data/earpodcat.dart';
+import 'package:cybershop/pages/buypage.dart';
+import 'package:cybershop/pages/buypages/podbuy.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class lapwidget extends StatelessWidget {
-  final Laptop laptop;
 
-  const lapwidget({super.key, required this.laptop});
+class podwidget extends StatelessWidget {
+  final  Pod pod;
+
+  const podwidget({super.key, required this.pod});
 
   @override
   Widget build(BuildContext context) {
@@ -17,20 +18,20 @@ class lapwidget extends StatelessWidget {
         child: Row(
             children: [
               Hero(
-                  tag: Key(laptop.id.toString()),
-                  child: Image.network(laptop.image,height: 80,).px12()),
+                  tag: Key(pod.Id.toString()),
+                  child: Image.network(pod.Image,height: 80,).px12()),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(laptop.name, style: TextStyle(fontFamily: 'poppins')),
+                  Text(pod.Name,style: TextStyle(fontFamily: 'poppins'),),
                   ButtonBar(
                     children: [
-                      " rs ${laptop.price}".text.fontFamily('poppins').make().py1(),
+                      " rs ${pod.Price}".text.fontFamily('poppins').make().py1(),
                       ElevatedButton(
                           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                           onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => lapbuypage(buy: laptop)));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => podbuypage(buy: pod)));
                           }, child: const Text("Buy",style: TextStyle(color: Colors.white),))
                     ],
                   )

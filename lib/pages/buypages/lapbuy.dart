@@ -1,8 +1,7 @@
-import 'package:cybershop/pages/widgets/lapcat.dart';
+
+import 'package:cybershop/data/lapcat.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cybershop/pages/widgets/phonecat.dart' ;
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -25,6 +24,7 @@ class lapbuypage extends StatelessWidget {
             Expanded(child: VxArc(
               height: 20,
               edge: VxEdge.top,
+              arcType: VxArcType.convey,
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Container(
@@ -33,12 +33,11 @@ class lapbuypage extends StatelessWidget {
                   child: Column(
                     children: [
                       buy.name.text.xl4.fontFamily('poppins').make(),
-                      Text(buy.Features,textAlign: TextAlign.justify,style: TextStyle(fontSize: 17,color: Colors.blueGrey,fontFamily: 'poppins'),)
+                      Text(buy.Features,textAlign: TextAlign.justify,style: const TextStyle(fontSize: 17,color: Colors.blueGrey,fontFamily: 'poppins'),)
                     ],
                   ).p16(),
                 ),
               ),
-              arcType: VxArcType.convey,
             )
             )
           ],
@@ -46,9 +45,9 @@ class lapbuypage extends StatelessWidget {
         bottomNavigationBar: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
-            "\ rs ${buy.price}".text.xl2.bold.make(),
-            ElevatedButton(onPressed: (){}, child: Text("Buy",style: TextStyle(color: Colors.white),),
-              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Themes.Blueish)),
+            " rs ${buy.price}".text.xl2.bold.make(),
+            ElevatedButton(onPressed: (){},
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)), child: const Text("Buy",style: TextStyle(color: Colors.white),),
             ).wh(100, 60)
           ],
         ).h(100),

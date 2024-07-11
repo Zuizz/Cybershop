@@ -1,4 +1,3 @@
-import 'package:cybershop/pages/widgets/phonecat.dart';
 class catalog {
   static final items =
   [
