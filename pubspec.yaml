@@ -41,13 +41,19 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.13.1"
+
+flutter_icons:
+  image_path: "assets/cybershop.png"
+  android: true
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+flutter_lints: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,8 +74,58 @@ flutter:
      - assets/icons/earphone.png
      - assets/icons/speaker.png
      - assets/icons/tablet.png
+     - assets/phones/1p.png
+     - assets/phones/1p2.png
+     - assets/phones/iphone.png
+     - assets/phones/mi.png
+     - assets/phones/nk.png
+     - assets/phones/nothing.png
+     - assets/phones/realme.png
+     - assets/phones/redmi.png
+     - assets/phones/samsung.png
+     - assets/phones/samsung2.png
+     - assets/laptops/acer.png
+     - assets/laptops/asus.png
+     - assets/laptops/asus2.png
+     - assets/laptops/dell.png
+     - assets/laptops/lenovo.png
+     - assets/laptops/lenovo2.png
+     - assets/laptops/lenovo3.png
+     - assets/laptops/predator.png
+     - assets/laptops/rog.png
+     - assets/pods/airpods.png
+     - assets/pods/boat.png
+     - assets/pods/boat2.png
+     - assets/pods/boult.png
+     - assets/pods/boult2.png
+     - assets/pods/chin.png
+     - assets/pods/edyell.png
+     - assets/pods/ptron.png
+     - assets/pods/realme.png
+     - assets/tabs/baatu.png
+     - assets/tabs/honor.png
+     - assets/tabs/honor2.png
+     - assets/tabs/mi.png
+     - assets/tabs/realme.png
+     - assets/tabs/rrr.png
+     - assets/tabs/redmi.png
+     - assets/tabs/samsung.png
+     - assets/tabs/samsung2.png
+     - assets/tabs/samsung3.png
+     - assets/speakers/amazon.png
+     - assets/speakers/amazon2.png
+     - assets/speakers/boat.png
+     - assets/speakers/boat2.png
+     - assets/speakers/govo.png
+     - assets/speakers/mivi.png
+     - assets/speakers/ptorn.png
+     - assets/speakers/zeb.png
+     - assets/speakers/zeb2.png
+     - assets/speakers/zeb3.png
+     - assets/featured.png
 
-  # An image asset can refer to one or more resolution-specific "variants", see
+
+       # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
   # For details regarding adding assets from package dependencies, see

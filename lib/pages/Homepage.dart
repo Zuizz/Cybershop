@@ -24,8 +24,8 @@ class Homepage extends StatelessWidget {
       bottom: true,
       right: true,
       child: Scaffold(
-        backgroundColor: MyTheme.creamColor,
-        appBar: AppBar(backgroundColor: Colors.transparent,iconTheme: IconThemeData(color: MyTheme.Blueish),),
+        backgroundColor: Colors.black87,
+        appBar: AppBar(backgroundColor: Colors.transparent,iconTheme: IconThemeData(color: MyTheme.creamColor),),
         drawer: csdrawer(),
         body:
         ListView(
@@ -34,16 +34,16 @@ class Homepage extends StatelessWidget {
                       children: [
 
                         const Text("Hello Zuizz!",style: TextStyle(
-                            fontSize: 30,fontFamily: 'poppins',
+                            fontSize: 30,fontFamily: 'poppins',color: Vx.red50
                         ),),
-                        const Text("Welcome to CyberShop",style: TextStyle(fontSize: 20,fontFamily: 'pixel'),),
-                        Padding(padding: EdgeInsets.only(top: 10),child: Text("Featured Device: ",style: TextStyle(fontFamily: 'poppins',),),),
-                                Image.network('https://th.bing.com/th/id/OIP.XwE_pO2cJENELWH8hQ5bPwHaEK?rs=1&pid=ImgDetMain',height: 300,),
+                        const Text("Welcome to CyberShop",style: TextStyle(fontSize: 20,fontFamily: 'pixel',color: Vx.red50),),
+                        Padding(padding: EdgeInsets.only(top: 10),child: Text("Featured Device: ",style: TextStyle(fontFamily: 'poppins',color: Vx.red50),),),
+                                Image.asset('assets/featured.png',height: 300,),
 
 
                       Padding(padding: EdgeInsets.only(bottom: 0)),
 
-                        Text("Categories",style: TextStyle(fontFamily: 'poppins',fontSize: 25),textAlign: TextAlign.center,),
+                        Text("Categories",style: TextStyle(fontFamily: 'poppins',fontSize: 25,color: Vx.red50),textAlign: TextAlign.center,),
                         Padding(padding: EdgeInsets.only(bottom: 30)),
                         Row(
                           children: [
@@ -54,7 +54,7 @@ class Homepage extends StatelessWidget {
 
                           child: Padding(padding: const EdgeInsets.only(right: 30,left: 30),
                             child: Card(
-                              color: Colors.white,
+                              color: MyTheme.Grey,
                                 elevation: 200,
                                   shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -67,7 +67,7 @@ class Homepage extends StatelessWidget {
 
                               child: Padding(padding: const EdgeInsets.only(right: 40,),
                                 child: Card(
-                                    color: Colors.white,
+                                    color: MyTheme.Grey,
                                     elevation: 200,
                                     shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -81,7 +81,7 @@ class Homepage extends StatelessWidget {
 
                               child: Padding(padding: const EdgeInsets.only(right: 40,),
                                 child: Card(
-                                    color: Colors.white,
+                                    color: MyTheme.Grey,
                                     elevation: 200,
                                     shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -99,7 +99,7 @@ class Homepage extends StatelessWidget {
 
                               child: Padding(padding: const EdgeInsets.only(top: 60,left:60 ),
                                 child: Card(
-                                    color: Colors.white,
+                                    color: MyTheme.Grey,
                                     elevation: 200,
                                     shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 
@@ -113,7 +113,7 @@ class Homepage extends StatelessWidget {
 
                               child: Padding(padding: const EdgeInsets.only(top: 60,left:110 ),
                                 child: Card(
-                                    color: Colors.white,
+                                    color: MyTheme.Grey,
                                     elevation: 200,
                                     shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 

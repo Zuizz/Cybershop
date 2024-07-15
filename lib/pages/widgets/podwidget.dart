@@ -1,5 +1,4 @@
 import 'package:cybershop/data/earpodcat.dart';
-import 'package:cybershop/pages/buypage.dart';
 import 'package:cybershop/pages/buypages/podbuy.dart';
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +18,15 @@ class podwidget extends StatelessWidget {
             children: [
               Hero(
                   tag: Key(pod.Id.toString()),
-                  child: Image.network(pod.Image,height: 80,).px12()),
+                  child: Image.asset(pod.Image,height: 80,).px12()),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(pod.Name,style: TextStyle(fontFamily: 'poppins'),),
+                  Text(pod.Name,style: TextStyle(fontFamily: 'poppins',color: Vx.red50),),
                   ButtonBar(
                     children: [
-                      " rs ${pod.Price}".text.fontFamily('poppins').make().py1(),
+                      " rs ${pod.Price}".text.fontFamily('poppins').red50.make().py1(),
                       ElevatedButton(
                           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                           onPressed: (){
@@ -39,6 +38,6 @@ class podwidget extends StatelessWidget {
               ))
             ]
         )
-    ).white.rounded.square(150).make().py32();
+    ).gray800.rounded.square(150).make().py32();
   }
 }

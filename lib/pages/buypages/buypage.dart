@@ -15,12 +15,13 @@ class buypage extends StatelessWidget {
       bottom: false,
       top: false,
       child: Scaffold(
+        backgroundColor: Colors.black87,
         appBar: AppBar(backgroundColor: Colors.transparent,),
         body: Column(
           children: [
             Hero(
               tag: Key(buy.id.toString()),
-                child: Image.network(buy.image).p16().h32(context)),
+                child: Image.asset(buy.image).p16().h32(context)),
             Expanded(child: VxArc(
               height: 20,
               edge: VxEdge.top,
@@ -28,12 +29,12 @@ class buypage extends StatelessWidget {
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.black,
                   width: context.screenWidth,
                   child: Column(
                     children: [
-                      buy.name.text.xl4.fontFamily('poppins').make(),
-                      Text(buy.Features,textAlign: TextAlign.justify,style: const TextStyle(fontSize: 17,color: Colors.blueGrey,fontFamily: 'poppins'),)
+                      buy.name.text.xl4.fontFamily('poppins').red50.make(),
+                      Text(buy.Features,textAlign: TextAlign.justify,style: const TextStyle(fontSize: 17,color: Vx.red200,fontFamily: 'poppins'),)
                     ],
                   ).p16(),
                 ),
@@ -41,11 +42,11 @@ class buypage extends StatelessWidget {
             )
             )
           ],
-        ).color(Vx.red50),
+        ).color(Vx.black),
         bottomNavigationBar: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
-            " rs ${buy.price}".text.xl2.bold.make(),
+            " rs ${buy.price}".text.red50.xl2.bold.make(),
             ElevatedButton(onPressed: (){},
             style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)), child: const Text("Buy",style: TextStyle(color: Colors.white),),
             ).wh(100, 60)

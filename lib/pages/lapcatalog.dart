@@ -6,6 +6,7 @@ import 'package:cybershop/pages/widgets/lapwidget.dart';
 
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 
 
@@ -16,8 +17,8 @@ class lapcatalog extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: MyTheme.creamColor,
-        appBar: AppBar(title: const Text("Laptops"),),
+        backgroundColor: Colors.black87,
+        appBar: AppBar(title: const Text("Laptops",style: TextStyle(color: Vx.red50),),backgroundColor: Colors.transparent,iconTheme: IconThemeData(color: Vx.red50),),
         drawer: const csdrawer(),
         body:
         Padding(padding: const EdgeInsets.all(15),

@@ -19,15 +19,15 @@ class tabwidget extends StatelessWidget {
             children: [
               Hero(
                   tag: Key(tab.Id.toString()),
-                  child: Image.network(tab.Image,height: 80,).px12()),
+                  child: Image.asset(tab.Image,height: 80,).px12()),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(tab.Name,style: TextStyle(fontFamily: 'poppins'),),
+                  Text(tab.Name,style: TextStyle(fontFamily: 'poppins',color: Vx.red50),),
                   ButtonBar(
                     children: [
-                      " rs ${tab.Price}".text.fontFamily('poppins').make().py1(),
+                      " rs ${tab.Price}".text.fontFamily('poppins').red50.make().py1(),
                       ElevatedButton(
                           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                           onPressed: (){
@@ -39,6 +39,6 @@ class tabwidget extends StatelessWidget {
               ))
             ]
         )
-    ).white.rounded.square(150).make().py32();
+    ).gray800.rounded.square(150).make().py32();
   }
 }

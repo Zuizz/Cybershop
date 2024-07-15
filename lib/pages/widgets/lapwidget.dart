@@ -18,15 +18,15 @@ class lapwidget extends StatelessWidget {
             children: [
               Hero(
                   tag: Key(laptop.id.toString()),
-                  child: Image.network(laptop.image,height: 80,).px12()),
+                  child: Image.asset(laptop.image,height: 80,).px12()),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(laptop.name, style: TextStyle(fontFamily: 'poppins')),
+                  Text(laptop.name, style: TextStyle(fontFamily: 'poppins',color:Vx.red50)),
                   ButtonBar(
                     children: [
-                      " rs ${laptop.price}".text.fontFamily('poppins').make().py1(),
+                      " rs ${laptop.price}".text.fontFamily('poppins').red50.make().py1(),
                       ElevatedButton(
                           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(MyTheme.Blueish)),
                           onPressed: (){
@@ -38,6 +38,6 @@ class lapwidget extends StatelessWidget {
               ))
             ]
         )
-    ).white.rounded.square(150).make().py32();
+    ).gray800.rounded.square(150).make().py32();
   }
 }

@@ -1,3 +1,4 @@
+
 plugins {
     id "com.android.application"
     id "kotlin-android"
@@ -54,4 +55,15 @@ android {
 
 flutter {
     source '../..'
+}
+android {
+
+
+    buildTypes {
+        release {
+
+            shrinkResources false
+            minifyEnabled false
+        }
+    }
 }

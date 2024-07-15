@@ -1,4 +1,5 @@
 import 'package:cybershop/pages/Homepage.dart';
+import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,7 +16,8 @@ class Cybershop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      themeMode: ThemeMode.system,
+
+      themeMode: ThemeMode.dark,
       home: Homepage(),
       debugShowCheckedModeBanner: false,
     );

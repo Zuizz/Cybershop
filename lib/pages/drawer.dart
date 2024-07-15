@@ -1,6 +1,7 @@
 import 'package:cybershop/pages/widgets/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 
 class csdrawer extends StatelessWidget {
@@ -12,14 +13,14 @@ class csdrawer extends StatelessWidget {
       backgroundColor: Colors.white,
       shadowColor: MyTheme.creamColor,
       child: Container(
-        color: MyTheme.Blueish,
+        color: Colors.black,
         child: ListView(
         children: [
           DrawerHeader(
             padding: EdgeInsets.zero,
             child: UserAccountsDrawerHeader(
             decoration: BoxDecoration(
-              color: MyTheme.Blueish
+              color: Vx.gray800
             ),
             margin: EdgeInsets.zero,
             accountName: Text("Zuizz",style: TextStyle(color: MyTheme.creamColor),),
