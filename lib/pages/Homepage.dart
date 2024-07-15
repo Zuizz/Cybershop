@@ -52,13 +52,13 @@ class Homepage extends StatelessWidget {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => const phonecatalog()));
                             },
 
-                          child: Padding(padding: const EdgeInsets.only(right: 30,left: 30),
+                          child: Padding(padding: const EdgeInsets.only(right: 50,left: 30),
                             child: Card(
                               color: MyTheme.Grey,
                                 elevation: 200,
                                   shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(5)),
 
-                                child: Image.asset('assets/icons/mobile.png',height: 90,)
+                                child: Image.asset('assets/icons/mobile.png',height: 100,)
                                   ),),),
                             GestureDetector(
                               onTap: (){
@@ -79,7 +79,7 @@ class Homepage extends StatelessWidget {
                                 Navigator.push(context, MaterialPageRoute(builder: (context) => tabcatalog()));
                               },
 
-                              child: Padding(padding: const EdgeInsets.only(right: 40,),
+                              child: Padding(padding: const EdgeInsets.only(left: 10,right: 10,),
                                 child: Card(
                                     color: MyTheme.Grey,
                                     elevation: 200,
